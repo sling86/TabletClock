@@ -38,34 +38,44 @@ body {
 	font-variant:normal;
 	font-weight:normal;
     color: red;
-	font-size:15em;
+	font-size:1em;
     margin:0px;
     padding:0px;
     text-transform:uppercase;
 }
-
-/* Portrait layout (default) */
-.app {
-    /*background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
-    position:absolute;             /* position in the center of the screen */
-    left:50%;
-    top:50%;
-    height:50%;                   /* text area height */
-    width:50%;                   /* text area width */
-    text-align:center;
+#clock {
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;	
+	margin: auto;
+	font-size:15em;
+	text-align:center;
 	vertical-align:middle;
-    padding:0;     /* image height is 200px (bottom 20px are overlapped with text) */
-    margin:auto;  /* offset vertical: half of image height and text area height */
-                                   /* offset horizontal: half of text area width */
+	font-family:DS-Digital;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
 }
+#blinkin {
+	font-family:DS-Digital;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+}
+
 
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
-    .app {
-        background-position:left center;
-        padding:0px 0px 0px 0px;  /* padding-top + padding-bottom + text area = image height */
-        margin:-20% 0px 0px -25%;  /* offset vertical: half of image height */
-                                      /* offset horizontal: half of image width and text area width */
+    #clock {
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;	
+	margin: auto;
+
     }
 }
 
