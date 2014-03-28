@@ -85,13 +85,3 @@ body {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
-
-#clock {
-	width: 5em;
-	height: 1em;
-	color: red;
-	font-size:15em;
-	text-align:center;
-	vertical-align:middle;
-	
-}
