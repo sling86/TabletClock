@@ -16,6 +16,12 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+ @font-face {
+    font-family: 'DS-Digital';
+    src: url('/font/DS-DIGI.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
@@ -94,11 +100,4 @@ body {
 .blink {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
-}
-
-@font-face {
-    font-family: 'DS-Digital';
-    src: url('/font/DS-DIGI.TTF') format('truetype');
-    font-weight: normal;
-    font-style: normal;
 }
