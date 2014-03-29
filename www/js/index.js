@@ -38,7 +38,7 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
 		updateClock();
-		setInterval('updateClock()', 1000 );
+		setInterval(updateClock, 1000 );
 		var currentBlink = "hidden";
 
 function updateClock ( )
