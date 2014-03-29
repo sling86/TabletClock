@@ -30,6 +30,7 @@ body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
     background-color:#000000;
+/*
     background-image:linear-gradient(top, #000000 0%, #001761 100%);
     background-image:-webkit-linear-gradient(top, #000000 0%, #001761 100%);
     background-image:-ms-linear-gradient(top, #000000 0%, #001761 100%);
@@ -38,6 +39,7 @@ body {
 	color-stop(0, #000000),
 	color-stop(1, #001761) );
     background-attachment:fixed;
+*/
     font-family:DS-Digital;
 	font-style:normal;
 	font-variant:normal;
