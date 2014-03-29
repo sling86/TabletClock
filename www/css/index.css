@@ -28,7 +28,6 @@
 
 body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
-    -webkit-text-size-adjust: 100%;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
     background-color:#000000;
     background-image:linear-gradient(top, #000000 0%, #001761 51%);
