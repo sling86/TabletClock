@@ -45,14 +45,14 @@ body {
 	font-variant:normal;
 	font-weight:normal;
     color: red;
-	font-size:32em;
+	font-size:30px;
     margin:0px;
     padding:0px;
     text-transform:uppercase;
 }
 #clock {
 	position: absolute;
-	top:30%;
+	top:0;
 	bottom: 0;
 	left: 0;
 	right: 0;	
