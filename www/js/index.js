@@ -37,9 +37,6 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-		var settings = webView.getSettings();
-		settings.setUseWideViewPort(true);
-		settings.setLoadWithOverviewMode(true);
 		updateClock();
 		setInterval(updateClock, 1000 );
 		var currentBlink = "hidden";
