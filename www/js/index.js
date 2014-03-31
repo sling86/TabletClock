@@ -42,12 +42,7 @@ var app = {
 		setInterval(updateClock, 1000 );
 		var currentBlink = "hidden";		
         
-				
-		//$('.app').textfill({ maxFontPixels: 36 });
-    }
-};
-
-function updateClock ( ) {
+		function updateClock ( ) {
 		if(currentBlink == "hidden"){
 			currentBlink = "visible";
 		} else {
@@ -73,3 +68,6 @@ function updateClock ( ) {
 		//document.getElementById("clock").firstChild.nodeValue = currentTimeString;
 		document.getElementById("clock").innerHTML = currentTimeString;
 	}
+		//$('.app').textfill({ maxFontPixels: 36 });
+    }
+};
