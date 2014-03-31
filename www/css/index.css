@@ -45,7 +45,7 @@ body {
 	font-variant:normal;
 	font-weight:normal;
     color: red;
-	font-size:250px;
+	font-size:14;
     margin:0px;
     padding:0px;
     text-transform:uppercase;
@@ -59,7 +59,7 @@ body {
 	margin: auto;
 	width:100%;
 	max-width:800px;
-	line-height:100%;
+	line-height:normal;
 	height:10px;
 	text-align:center;
 	vertical-align:middle;
