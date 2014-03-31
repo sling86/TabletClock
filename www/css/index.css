@@ -52,40 +52,22 @@ body {
 }
 #clock {
 	position: absolute;
-	top:0;
-	bottom: 0;
-	left: 0;
-	right: 0;	
-	margin: auto;
-	width:100%;
-	max-width:800px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);    /* Older Gecko browser */
+  -ms-transform: translate(-50%, -50%);     /* IE9+ */
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 	line-height:normal;
-	height:10px;
-	text-align:center;
-	vertical-align:middle;
 	font-family:DS-Digital;
-	font-style:normal;
-	font-variant:normal;
-	font-weight:normal;
-}
-#blinkin {
-	font-family:DS-Digital;
-	font-style:normal;
-	font-variant:normal;
-	font-weight:normal;
 }
 
 
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
     #clock {
-	position: absolute;
-	top:0;
-	bottom: 0;
-	left: 0;
-	right: 0;	
-	margin: auto;
-	height:10px;
+	
     }
 }
 
