@@ -37,7 +37,7 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function (id) {
-		
+		console.log("BODY Height: " + $('html').height() + " BODY Width: " + $('html').width());
 		updateClock();
 		setInterval(updateClock, 1000 );
 		var currentBlink = "hidden";		
@@ -68,6 +68,11 @@ var app = {
 			//document.getElementById("clock").firstChild.nodeValue = currentTimeString;
 			document.getElementById("clock").innerHTML = currentTimeString;
 		}
-		$('.app').textfill({ maxFontPixels: 36 });
+		//$('#clock').textfill({
+			//debug: true,
+			//maxFontPixels: 0
+			//});
+			
+			console.log("BODY Height: " + $('html').height() + " BODY Width: " + $('html').width());
     }
 };
