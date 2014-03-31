@@ -45,7 +45,8 @@ body {
 	font-variant:normal;
 	font-weight:normal;
     color: red;
-	font-size:95vw;
+	font-size:36px;
+	font-size:10em;
     margin:0px;
     padding:0px;
     text-transform:uppercase;
