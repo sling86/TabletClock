@@ -43,12 +43,11 @@ var app = {
 		var currentBlink = "hidden";		
         
 				
-		$('.app').textfill({ maxFontPixels: 36 });
+		//$('.app').textfill({ maxFontPixels: 36 });
     }
 };
 
-function updateClock ( )
-	{
+function updateClock ( ) {
 		if(currentBlink == "hidden"){
 			currentBlink = "visible";
 		} else {
