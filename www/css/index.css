@@ -45,8 +45,10 @@ body {
 	font-variant:normal;
 	font-weight:normal;
     color: red;
+	/*
 	font-size:36px;
 	font-size:30em;
+	*/
     margin:0px;
     padding:0px;
     text-transform:uppercase;
@@ -55,7 +57,6 @@ body {
 	position: absolute;
   	top: 50%;
   	left: 50%;
-	width:99%;
   	-webkit-transform: translate(-50%, -50%);
 	-moz-transform: translate(-50%, -50%);    /* Older Gecko browser */
 	-ms-transform: translate(-50%, -50%);     /* IE9+ */
