@@ -18,75 +18,59 @@
  */
 var app = {
     // Application Constructor
-    initialize: function() {
+    initialize: function () {
         this.bindEvents();
     },
     // Bind Event Listeners
     //
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
-    bindEvents: function() {
+    bindEvents: function () {
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
-    onDeviceReady: function() {
+    onDeviceReady: function () {
         app.receivedEvent('deviceready');
     },
     // Update DOM on a Received Event
-    receivedEvent: function(id) {
+    receivedEvent: function (id) {
 		
 		updateClock();
 		setInterval(updateClock, 1000 );
 		var currentBlink = "hidden";		
-        //var parentElement = document.getElementById(id);
-        //var listeningElement = parentElement.querySelector('.listening');
-        //var receivedElement = parentElement.querySelector('.received');
-
-        //listeningElement.setAttribute('style', 'display:none;');
-        //receivedElement.setAttribute('style', 'display:block;');
-
-        //console.log('Received Event: ' + id);
-		
+        
 				
 		$('.app').textfill({ maxFontPixels: 36 });
     }
 };
 
 function updateClock ( )
-{
-	if(currentBlink == "hidden"){
-		currentBlink = "visible";
+	{
+		if(currentBlink == "hidden"){
+			currentBlink = "visible";
+		} else {
+			currentBlink = "hidden";
+		}
+		var currentTime = new Date ( );
+		var currentHours = currentTime.getHours ( );
+		var currentMinutes = currentTime.getMinutes ( );
+		var currentSeconds = currentTime.getSeconds ( );
+		// Pad the minutes and seconds with leading zeros, if required
+		currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
+		currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
+		// Choose either "AM" or "PM" as appropriate
+		var timeOfDay = ( currentHours < 12 ) ? "AM" : "PM";
+		// Convert the hours component to 12-hour format if needed
+		currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;
+		// Convert an hours component of "0" to "12"
+		currentHours = ( currentHours == 0 ) ? 12 : currentHours;
+		// Compose the string for display
+		//var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
+		var currentTimeString = currentHours + "<span id='blinkin' style='visibility:" + currentBlink + "'>:</span>" + currentMinutes + " " + timeOfDay;
+		// Update the time display
+		//document.getElementById("clock").firstChild.nodeValue = currentTimeString;
+		document.getElementById("clock").innerHTML = currentTimeString;
 	}
-	else{
-		currentBlink = "hidden";
-	}
-	var currentTime = new Date ( );
-	var currentHours = currentTime.getHours ( );
-	var currentMinutes = currentTime.getMinutes ( );
-	var currentSeconds = currentTime.getSeconds ( );
-	
-	// Pad the minutes and seconds with leading zeros, if required
-	currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
-	currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
-	
-	// Choose either "AM" or "PM" as appropriate
-	var timeOfDay = ( currentHours < 12 ) ? "AM" : "PM";
-	
-	// Convert the hours component to 12-hour format if needed
-	currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;
-	
-	// Convert an hours component of "0" to "12"
-	currentHours = ( currentHours == 0 ) ? 12 : currentHours;
-	
-	// Compose the string for display
-	//var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
-	var currentTimeString = currentHours + "<span id='blinkin' style='visibility:" + currentBlink + "'>:</span>" + currentMinutes + " " + timeOfDay;
-	
-	// Update the time display
-	//document.getElementById("clock").firstChild.nodeValue = currentTimeString;
-	document.getElementById("clock").innerHTML = currentTimeString;
-
-}
